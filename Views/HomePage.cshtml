@@ -1,0 +1,354 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.HomePage>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	Layout = "LayoutWithShowcase.cshtml";
+}
+
+<main>
+    <!-- PARTNERS -->
+<div class="container">
+    <div class="row justify-content-center align-items-center pt-5">
+        <div class="col-3"><img src="./assets/img/companylogo/dorfus-w.png" alt="" width="100%"></div>
+        <div class="col-3"><img src="./assets/img/companylogo/gobona-w.png" alt="" width="100%"></div>
+        <div class="col-3"><img src="./assets/img/companylogo/martino-w.png" alt="" width="100%"></div>
+        <div class="col-3"><img src="./assets/img/companylogo/square-w.png" alt="" width="100%"></div>
+    </div>
+</div>
+
+<!-- FEATURES -->
+<div class="container-fluid">
+    <div class="container py-5">
+        <div class="row justify-content-between" id="features">
+                <div class="col-4">
+                    <p class="box-feature">Features</p>
+                    <h1>@Model.Value("featuresMainText")</h1> 
+                    <div class="row">
+                            <button class="btn-fill mt-3">Learn more <i class="fa-solid fa-arrow-right" id="arrow"></i></button>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <i class="fa-regular fa-handshake" id="feature-icon"></i>
+                    <h6>@Model.Value("card1Title")</h6>
+                    <p>@Model.Value("card1Description")</p>
+
+                    <i class="fa-regular fa-lightbulb" id="feature-icon"></i>
+                    <h6>@Model.Value("card2Title")</h6>
+                    <p>@Model.Value("card2Description")</p>
+                </div>    
+                <div class="col-3">
+                    <i class="fa-solid fa-money-bill-trend-up" id="feature-icon"></i>
+                    <h6>@Model.Value("card3Title")</h6>
+                    <p>@Model.Value("card3Description")</p>
+                    <i class="fa-solid fa-box" id="feature-icon"></i>
+                    <h6>@Model.Value("card4Title")</h6>
+                    <p>@Model.Value("card4Description")</p>
+                </div>
+        </div>
+    </div>
+</div>
+
+<!-- ABOUT -->
+<div class="container py-5">
+    <div class="row">
+        <div class="col-6">
+            <img src="./assets/img/happy_woman.png" alt="a really happy woman" id="happy-woman">
+        </div>
+        <div class="col-6 align-self-center">
+            <p class="box-feature">About company</p>
+            <h2 class="mb-5">We Are Business Consulting & Credit Repair Experts</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime inventore, amet assumenda magnam exercitationem tempora fugiat ducimus vitae itaque cupiditate!</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi laborum provident asperiores vero optio! Qui!</p>
+            <div>
+                <button class="btn-fill-black">Learn more <i class="fa-solid fa-arrow-right" id="arrow"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SERVCES -->
+<div class="container-fluid py-5" id="service-container">
+    <div class="container">
+        <div class="row justify-content-start">
+            <div class="col-5">
+                <p class="box-feature">Our services</p>
+                <h1>We provide the best service for consulting.</h1>
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center g-2">
+            <div class="col m-3 p-4" id="service">
+                <h2 class="mb-4">__</h2>
+                <h5>Business Advice</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem labore minima enim</p>
+                <div class="text-end">
+                    <button class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+            <div class="col m-3 p-4" id="service">
+                <h2 class="mb-4">__</h2>
+                <h5>Startup Business</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem labore minima enim</p>
+                <div class="text-end">
+                    <button class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+            <div class="col m-3 p-4" id="service">
+                <h2 class="mb-4">__</h2>
+                <h5>Financial Advice</h5>
+                <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem labore minima enim</p>
+                <div class="text-end">
+                    <button class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></button>
+                </div></div>
+            <div class="col m-3 p-4" id="service">
+                <h2 class="mb-4">__</h2>
+                <h5>Risk Management</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem labore minima enim</p>
+                <div class="text-end">
+                    <button class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center g-2">
+            <div class="col text-center">
+                <button class="btn-empty">Browse Services <i class="fa-solid fa-arrow-right" id="arrow"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- WHY US -->
+<div class="container py-5">
+    <div class="row">
+        <div class="col-5">
+            <p class="box-feature">Why choose us<p>
+                <h2>Why we are the best business consulting agency</h2>
+        </div>
+    </div>
+    <div class="row justify-content-between">
+        <div class="col-4 align-self-center">
+            <div class="row">
+                <div class="col text-end align-self-center">
+                   <img src="./assets/img/icons/done.png" alt="" width="60"> 
+                </div>
+                <div class="col-8 align-self-center">
+                    <h5>Process Excelence</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>  
+                </div>
+            </div>
+            <div class="row pt-3">
+                <div class="col text-end align-self-center">
+                   <img src="./assets/img/icons/umbrella.png" alt="" width="50"> 
+                </div>
+                <div class="col-8 align-self-center">
+                    <h5>Strategic Planning</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>  
+                </div>
+            </div>
+            <div class="row pt-3">
+                <div class="col text-end align-self-center">
+                   <img src="./assets/img/icons/pencil.png" alt="" width="50"> 
+                </div>
+                <div class="col-8 align-self-center">
+                    <h5>Experience Design</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>  
+                </div>
+            </div>
+            <div class="row pt-3">
+                <div class="col text-end align-self-center">
+                   <img src="./assets/img/icons/thinking.png" alt="" width="50"> 
+                </div>
+                <div class="col-8 align-self-center">
+                    <h5>Artificial Intelligence</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>  
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <img src="./assets/img/whyy.png" alt="" width="100%">
+        </div>
+    </div>
+</div>
+
+<!-- PROJECTS -->
+<div class="container py-5">
+    <div class="col-12 text-center">
+        <p class="box-feature">Project & Case Studies</p>
+        <h2>Let´s Look Our Global Projects</h2>
+    </div>
+    <div class="row pb-5">
+        <div class="col-6">
+            <img src="./assets/img/project/1.png" alt="" width="100%">
+            <h4 class="mb-3 p-2">Grow your business</h4>
+            <hr>
+            <div class="col text-end">
+                <a href="#">Read more <i class="fa-solid fa-arrow-right" id="arrow"></i></a>
+            </div>
+        </div>
+        <div class="col-6">
+            <img src="./assets/img/project/2.png" alt="" width="100%">
+            <h4 class="mb-3 p-2" >Why your client needs a responsive website</h4>
+            <hr>
+            <div class="col text-end">
+                <a href="#">Read more <i class="fa-solid fa-arrow-right" id="arrow"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <img src="./assets/img/project/3.png" alt="" width="100%">
+            <h4 class="mb-3">Educate your employees to get better results</h4>
+            <hr>
+            <div class="col text-end">
+                <a href="#">Read more <i class="fa-solid fa-arrow-right" id="arrow"></i></a>
+            </div>
+        </div>
+        <div class="col-6">
+            <img src="./assets/img/project/4.png" alt="" width="100%">
+            <h4 class="mb-3">Business insights is a important piece of your business</h4>
+            <hr>
+            <div class="col text-end" >
+                <a href="#">Read more <i class="fa-solid fa-arrow-right" id="arrow"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="col text-center p-5">
+        <button class="btn-fill-black">All recent projects</button>
+    </div>
+</div>
+
+<!-- MEMBERS -->
+<div class="container-fluid p-5" id="team-container">
+    <div class="container">
+        <div class="row justify-content-center align-items-center g-2">
+            <div class="col">
+                <p class="box-feature">Meet our team</p>
+                <h2>Experienced Team Members</h2>
+            </div>        
+        </div>
+        <div class="row justify-content-evenly align-items-center g-5">
+            <div class="col-3">
+                <img src="./assets/img/members/member1.png" alt="" width="100%">
+                <h4>Kristine Palmer</h4>
+                <p>Chief Operation Officer</p>
+            </div>
+            <div class="col-3">
+                <img src="./assets/img/members/member2.png" alt="" width="100%">
+                <h4>Mark Aubri</h4>
+                <p>Senior Consultant</p>
+            </div>
+            <div class="col-3">
+                <img src="./assets/img/members/member3.png" alt="" width="100%">    
+                <h4>Kimberly Hansen</h4>
+                <p>Senior Consultant</p>
+            </div>
+            <div class="col-3">
+                <img src="./assets/img/members/member4.png" alt="" width="100%">
+                <h4>Justin Willoman</h4>
+                <p>Senior Tech Consultant</p>
+            </div>
+        </div>
+    </div>
+
+<!-- TESTIMONIAL -->
+    <div class="container text-center p-5 mt-5" id="testimonial">
+        <p class="box-feature">Testimonial</p>
+        <h2>What Our Client Says</h2>
+        <div class="container p-4">
+            <div class="row justify-content-center">
+                <div class="col-4 text-start align-self-center">
+                    <p>⭐⭐⭐⭐⭐</p>
+                    <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur nihil asperiores, necessitatibus repellendus, perspiciatis sint facilis error earum quae, aperiam quaerat impedit omnis dolores recusandae."</p>
+                    <div class="row">
+                        <div class="col-3">
+                            <img src="./assets/img/reviews/review1.png" alt="">
+                        </div>
+                        <div class="col-9">
+                            <h5>Cassandra Warren</h5>
+                            <p>Business manager, Dorfus</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 text-start align-self-center">
+                    <p>⭐⭐⭐⭐⭐</p>
+                    <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus amet dignissimos, culpa iusto et ratione sit corporis iure impedit neque libero quas optio. Saepe, exercitationem."</p>
+                    <div class="row">
+                        <div class="col-3">
+                            <img src="./assets/img/reviews/review3.png" alt="">
+                        </div>
+                        <div class="col-9">
+                            <h5>Amanda Tulling</h5>
+                            <p>Senior Developer, Square</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 text-start align-self-center">
+                    <p>⭐⭐⭐⭐⭐</p>
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut nesciunt iusto delectus enim unde aut quidem suscipit? Dolores quas quia autem sapiente, voluptates vitae eius?"</p>
+                    <div class="row">
+                        <div class="col-3">
+                            <img src="./assets/img/reviews/review2.png" alt="">
+                        </div>
+                        <div class="col-9">
+                            <h5>Jack McDogglas</h5>
+                            <p>Key Account Manager, Gobona</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="btn-fill-black">All reviews <i class="fa-solid fa-arrow-right" id="arrow"></i></button>
+    </div>
+</div>
+
+<!-- ARTICLES & NEWS -->
+<div class="container pt-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-12 text-start">
+            <p class="box-feature">Article & News</p>
+            <div class="row">
+                <div class="col-6">
+                    <h2>Get Every Single Article & News</h2>
+                </div>
+                <div class="col-6 text-end">
+                    <button class="btn-empty">Browse articles <i class="fa-solid fa-arrow-right" id="arrow"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-4">
+        <div class="col-4">
+            <img src="./assets/img/news/news1.png" alt="a woman who is way to happy" width="100%">
+            <p>Business</p>
+            <h4>How to use digitilazation in the classroom</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti officia ipsum iure!</p>
+        </div>
+        <div class="col-4">
+            <img src="./assets/img/news/news2.png" alt="a screen showing features" width="100%">
+            <p>Business</p>
+            <h4>How to use digitilazation in the classroom</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti officia ipsum iure!</p>
+        </div>
+        <div class="col-4">
+            <img src="./assets/img/news/news3.png" alt="css learning books" width="100%">
+            <p>Business</p>
+            <h4>How to use digitilazation in the classroom</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti officia ipsum iure!</p>
+        </div>
+    </div>
+</div>
+
+<!-- NEWSLETTER -->
+<div class="container-fluid" id="newsletter-container">
+    <div class="container py-5">
+        <div class="row justify-content-center align-items-center g-2">
+            <div class="col-8">
+                <h2>Subscribe to our newsletter</h2>
+            </div>
+            <div class="col-2 text-end">
+                <input type="text" placeholder="your.mail@domain.com">
+            </div>
+            <div class="col-2"><button class="btn-fill">Signup <i class="fa-solid fa-arrow-right" id="arrow"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+</main>

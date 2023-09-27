@@ -1,0 +1,55 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.Contact>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	Layout = "LayoutWithBreadcrumb.cshtml";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-between align-self-center g-2">
+        <div class="col-3" id="contact-cards">
+            <h3>Visit Us</h3>
+            <h6>@Model.Value("adress")</h6>
+            <h6>@Model.Value("zipCode") @Model.Value("city")</h6>
+        </div>
+        <div class="col-3" id="contact-cards">
+            <h3>Call us</h3>
+            <h6>+46 @Model.Value("phone1")</h6>
+            <h6>+46 @Model.Value("phone2")</h6>
+        </div>
+        <div class="col-3" id="contact-cards">
+            <h3>Email us</h3>
+            <h6>@Model.Value("email1")</h6>
+            <h6>@Model.Value("email2")</h6>
+        </div>
+    </div>
+</div>
+<div class="container p-5 mb-5" id="form-container">
+    <h2 class="text-center">Leave us a message for any information</h2>
+    <div class="container">
+        <form class="p-5">
+            <div class="mb-3 row">
+                <div class="col">
+                    <input type="text" class="form-control" name="inputName" id="inputName" placeholder="Name" required>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <div class="col">
+                    <input type="email" class="form-control" name="inputName" id="inputName" placeholder="Email" required>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <div class="col">
+                    <textarea type="text" rows="4" class="form-control" name="inputName" id="inputName" placeholder="Your message" required></textarea>
+                </div>
+            </div>
+            <div class="mb-3 row justify-content-center">
+                <button type="submit" class="btn-fill">Send</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="container-fluid" id="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16447.809431806803!2d14.600924966331617!3d58.98210846465615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465b789ce17a4283%3A0x8dc655840e5b52e9!2zTGF4w6U!5e0!3m2!1ssv!2sse!4v1693821321818!5m2!1ssv!2sse" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>

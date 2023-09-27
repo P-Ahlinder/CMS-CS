@@ -1,0 +1,226 @@
+#brands-container {
+    margin-top:33px;
+}
+
+#navi-container {
+    background-color: #F0EFE9;
+}
+
+.btn-fill {
+  border-radius: 30px;
+  border: none;
+  background-color: #F9D783;
+  padding: 5px 20px;
+  margin: 10px;
+  max-width: 200px;
+  height: 50px;
+}
+
+.btn-fill-black {
+  border-radius: 30px;
+  background-color: #F9D783;
+  padding: 5px 20px;
+  margin: 10px;
+  max-width: 200px;
+  height: 50px;
+  background-color: black;
+  color: #F0EFE9;
+  transition: ease 0.2s;
+  border: 1px solid white;
+}
+.btn-fill-black:hover {
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.btn-empty {
+  border: 1px solid black;
+  border-radius: 30px;
+  padding: 5px 20px;
+  margin: 10px;
+  max-width: 200px;
+  height: 50px;
+}
+
+.btn-arrow {
+  background-color: black;
+  border: none;
+  color: #F0EFE9;
+  border-radius: 300rem;
+  transition: ease 0.2s;
+  width: 50px;
+  height: 50px;
+}
+.btn-arrow:hover {
+  color: black;
+  background-color: white;
+}
+
+#top-container {
+  background-color: #F0EFE9;
+}
+
+#features {
+  border: 1px solid rgb(189, 189, 189);
+  padding: 50px;
+}
+
+.box-feature {
+  color: #ff7b00;
+  font-weight: 500;
+}
+
+#arrow {
+  rotate: -40deg;
+  padding: 10px;
+}
+
+#feature-icon {
+  font-size: 30px;
+  padding: 10px 0;
+}
+
+#happy-woman {
+  width: 80%;
+  height: auto;
+}
+
+#service-container {
+  background-color: #F0EFE9;
+}
+
+#service {
+  transition: ease 0.3s;
+  background-color: white;
+}
+#service:hover {
+  background-color: #F9D783;
+}
+
+header {
+  background-color: #F0EFE9;
+}
+
+#nav-container {
+  border-top: 1px solid lightgray;
+}
+
+#contact-info a {
+  color: black;
+  transition: ease 0.2s;
+  text-decoration: none;
+  padding-right: 1rem;
+}
+#contact-info a:hover {
+  color: #ff7b00;
+}
+
+.nav-item {
+  padding-top: 14px;
+}
+
+#icon {
+  margin-bottom: 10px;
+  margin-right: 3px;
+}
+
+#team-container {
+  background-color: #EDCF87;
+}
+
+#testimonial {
+  background-color: white;
+}
+
+#newsletter-container {
+  background-color: #F0EFE9;
+}
+
+input {
+  border-radius: 50px;
+  height: 45px;
+  border: none;
+  padding-inline-start: 12px;
+}
+
+footer {
+  background-color: #0E1021;
+  color: white;
+}
+footer a {
+  transition: ease 0.3s;
+  color: white;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #ff7b00;
+}
+
+#icons-footer {
+  padding: 0;
+}
+
+#heading-container {
+  background-color: #F0EFE9;
+}
+
+.news-search {
+  border: 2px solid rgba(0, 0, 0, 0.432);
+}
+
+#categories p {
+  margin: 5px 0;
+}
+
+#all-news-container {
+  background-color: #F0EFE9;
+}
+
+#breadcrumb-container {
+  background-color: #F0EFE9;
+}
+
+#contact-cards {
+  border: 1px solid rgb(190, 190, 190);
+  padding: 10px;
+}
+
+#form-container {
+  background-color: #F0EFE9;
+}
+#form-container input {
+  border-radius: 15px;
+  border: none;
+}
+#form-container textarea {
+  border: none;
+  border-radius: 15px;
+}
+
+#map-container {
+  padding: 0;
+  margin: 0;
+  margin-bottom: -5px;
+}
+
+
+.item-link {
+  padding: 10px;
+  border: 1px solid black;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: ease 0.4s;
+  margin:0 3px;
+}
+.item-link:hover {
+  background-color: #0E1021;
+  color: #F9D783;
+}
+.dot{
+    font-size:50px;
+    color: #F9D783;
+}
+/*# sourceMappingURL=styles.css.map */
+        

@@ -1,0 +1,95 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.NewsPage>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@using Umbraco.Cms.Core.Models.PublishedContent;
+
+@{
+	Layout = "LayoutWithBreadcrumb.cshtml";
+	var itemsPerPage = 6;
+	var pageNumber = 1;
+	
+	if(!int.TryParse(Context.Request.Query["page"], out pageNumber))
+	    pageNumber = 1;
+	
+	
+    var selection = Umbraco?.Content(Guid.Parse("99474466-1817-4ba1-9b96-d9bccd0d97e9"))
+    .ChildrenOfType("articlesItem")?
+    .Where(x => x.IsVisible())
+    .OrderByDescending(x => x.CreateDate).ToList();
+    
+    
+        var totalItems = selection?.Count() ?? 0;
+        var pagedItems = selection?.Skip((pageNumber -1)* itemsPerPage).Take(itemsPerPage);
+    
+}
+
+
+
+<div class="container text-center">
+    <div class="row justify-content-center g-4 p-4">
+    @if(selection != null)
+    {
+        @foreach (var item in selection)
+        {
+            var url = item.Url();
+            var date = item.CreateDate;
+            var image = item.Value<IPublishedContent>("articleImage");
+            var categories = item.Value("articleCategory");
+            var title = item.Name();
+        	var pretext = item.Value("articlePreText");
+            
+            <div class="col-sm-4 text-start">
+                <img src="@image?.Url()" alt="" width="100%" />
+                <p class="py-3">@categories @date.ToString("dd") @date.ToString("MMM")</p>
+                <h4>@title</h4>
+                <p>@pretext</p>
+                <p><a href="@item.Url()">Read More..</a></p>
+            </div>
+        }
+    }
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row justify-content-center align-items-center g-2">
+        <div class="col-12 text-center">
+            <nav aria-label="Page navigation">
+                @if(pageNumber > 1)
+                {
+                    <a href="?page=@(pageNumber -1)" class="item-link link-next" aria-label="Previous"><span aria-hidden="true" ><i class="fa-sharp fa-solid fa-chevron-left"></i></span></a>
+                }
+                <a href="#" class="item-link active">1</a>
+                <a href="#" class="item-link">2</a>
+                
+                @if(pageNumber < Math.Ceiling((decimal)totalItems / itemsPerPage))
+                {
+                    <a href="?page=@(pageNumber + 1)" class="item-link link-next" aria-label="Next"><span aria-hidden="true"><i class="fa-sharp fa-solid fa-chevron-right"></i></span></a>
+                }
+            </nav>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid mt-5" id="newsletter-container">
+    <div class="container py-5">
+        <div class="row justify-content-center align-items-center g-2">
+            <div class="col-8">
+                <h2>Subscribe to our newsletter</h2>
+            </div>
+            <div class="col-2 text-end">
+                <input type="text" placeholder="your.mail@domain.com">
+            </div>
+            <div class="col-2"><button class="btn-fill">Signup <i class="fa-solid fa-arrow-right" id="arrow"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+

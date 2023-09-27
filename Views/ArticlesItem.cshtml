@@ -1,0 +1,127 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.ArticlesItem>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	Layout = "LayoutWithBreadcrumb.cshtml";
+}
+
+            
+            
+<div class="container-fluid pb-5" id="heading-container">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col">
+                <h1>News & articles</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-9">
+            <p>
+                <span class="mx-3">@Model.Value("createDate")</span><span class="dot">.</span>
+                <span class="mx-3">@Model.Value("articleCategory")</span> <span class="dot">.</span>
+                <span class="mx-3">@Model.Value("articleAuthor")</span> <span class="dot">.</span>
+                <img src="@Model.Value("articlesImage")" />
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row g-5 justify-content-between">
+        <div class="col-9 pb-5">
+            <p class="py-3">@Model.Value("articleContent")</p>
+        </div>
+        <div class="col-3 d-flex row mt-5">
+            <input class="news-search" type="text" placeholder="Type to search"/>
+            <div class="border mt-4 p-4">
+                <div class="row">
+                    <div class="col">
+                        <h4 class="fw-bold">Recent posts</h4>
+                        <p class="fw-bold">How to blow through capaital at an incedible rate</p>
+                        <p class="fw-lighter">Jan 14, 2020</p>
+                        <hr/>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <p class="fw-bold">Design studios that everyone Should know about</p>
+                        <p class="fw-lighter">Jan 14, 2020</p>
+                        <hr/>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <p class="fw-bold">Figma on Figma: How we built our website design system</p>
+                        <p class="fw-lighter">Jan 14, 2020</p>
+                        <hr/>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <p class="fw-bold">Figma on Figma: How we built our website design system</p>
+                        <p class="fw-lighter">Jan 14, 2020</p>
+                        <hr/>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row mt-3">
+                    <div class="col border p-4 mt-4" id="categories">
+                        <h4 class="fw-bold">Categories</h4>
+                        <p>Technology - <span class="fw-light">20 posts</span></p>
+                        <p>Freelancing - <span class="fw-light">7 posts</span></p>
+                        <p>Writing - <span class="fw-light">16 posts</span></p>
+                        <p>Marketing - <span class="fw-light">11 posts</span></p>
+                        <p>Business - <span class="fw-light">35 posts</span></p>
+                        <p>Education - <span class="fw-light">14 posts</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid py-5" id="all-news-container">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-12 text-start">
+                <p class="box-feature">Article & News</p>
+                <div class="row">
+                    <div class="col-6">
+                        <h2>Get Every Single Article & News</h2>
+                    </div>
+                    <div class="col-6 text-end">
+                        <button class="btn-empty">Browse articles <i class="fa-solid fa-arrow-right" id="arrow"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-4">
+            <div class="col-4">
+            <img src="./assets/img/news/news1.png" alt="a woman who is way to happy" width="100%">
+            <p>Business</p>
+            <h4>How to use digitilazation in the classroom</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti officia ipsum iure!</p>
+        </div>
+        <div class="col-4">
+            <img src="./assets/img/news/news2.png" alt="a screen showing features" width="100%">
+            <p>Business</p>
+            <h4>How to use digitilazation in the classroom</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti officia ipsum iure!</p>
+        </div>
+        <div class="col-4">
+            <img src="./assets/img/news/news3.png" alt="css learning books" width="100%">
+            <p>Business</p>
+            <h4>How to use digitilazation in the classroom</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti officia ipsum iure!</p>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+

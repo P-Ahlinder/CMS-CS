@@ -1,0 +1,55 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.ServicePage>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	Layout = "LayoutWithBreadcrumb.cshtml";
+}
+
+<div class="container-fluid py-5" id="service-container">
+    <div class="container">
+        <div class="row justify-content-start">
+            <div class="col-5">
+                <p class="box-feature">Our services</p>
+                <h1>We provide the best service for consulting.</h1>
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center g-2">
+            <div class="col m-3 p-4" id="service">
+                <h2 class="mb-4">__</h2>
+                <h5>Business Advice</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem labore minima enim</p>
+                <div class="text-end">
+                    <button class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+            <div class="col m-3 p-4" id="service">
+                <h2 class="mb-4">__</h2>
+                <h5>Startup Business</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem labore minima enim</p>
+                <div class="text-end">
+                    <button class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+            <div class="col m-3 p-4" id="service">
+                <h2 class="mb-4">__</h2>
+                <h5>Financial Advice</h5>
+                <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem labore minima enim</p>
+                <div class="text-end">
+                    <button class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></button>
+                </div></div>
+            <div class="col m-3 p-4" id="service">
+                <h2 class="mb-4">__</h2>
+                <h5>Risk Management</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem labore minima enim</p>
+                <div class="text-end">
+                    <button class="btn-arrow"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center g-2">
+            <div class="col text-center">
+                <button class="btn-empty">Browse Services <i class="fa-solid fa-arrow-right" id="arrow"></i></button>
+            </div>
+        </div>
+    </div>
+</div>

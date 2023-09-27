@@ -1,0 +1,19 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+
+<!-- HEADER -->
+<div class="container-fluid" id="top-container">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-6 align-self-center mt-5">
+                    <h2 class="display-2 p-3">@Model.Value("showcaseTitle")</h2>
+                    <p class="px-3">@Model.Value("showcaseParagraphText")</p>
+                    <div>
+                        <button class="btn-fill">Get consulting <i class="fa-solid fa-arrow-right" id="arrow"></i></button><button class="btn-empty">Learn more <i class="fa-solid fa-arrow-right" id="arrow"></i></button>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <img src="./assets/img/lost_man.png" alt="a person that is confused" id="bagpipe" width="100%">
+                </div>
+            </div>
+        </div>
+</div>
