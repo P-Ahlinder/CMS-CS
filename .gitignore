@@ -469,4 +469,4 @@ appsettings-schema.*.json
 # Log files
 /umbraco/Logs/
 
-
+# Media files
