@@ -5,6 +5,7 @@
 
 @{
 	Layout = "LayoutWithBreadcrumb.cshtml";
+	
 	var itemsPerPage = 6;
 	var pageNumber = 1;
 	
@@ -19,7 +20,7 @@
     
     
         var totalItems = selection?.Count() ?? 0;
-        var pagedItems = selection?.Skip((pageNumber -1)* itemsPerPage).Take(itemsPerPage);
+        var pagedItems = selection?.Skip((pageNumber -1) * itemsPerPage).Take(itemsPerPage);
     
 }
 
@@ -27,9 +28,9 @@
 
 <div class="container text-center">
     <div class="row justify-content-center g-4 p-4">
-    @if(selection != null)
+    @if(pagedItems != null)
     {
-        @foreach (var item in selection)
+        @foreach (var item in pagedItems!)
         {
             var url = item.Url();
             var date = item.CreateDate;
@@ -40,7 +41,7 @@
             
             <div class="col-sm-4 text-start">
                 <img src="@image?.Url()" alt="" width="100%" />
-                <p class="py-3">@categories @date.ToString("dd") @date.ToString("MMM")</p>
+                <p class="py-3">@categories</p>
                 <h4>@title</h4>
                 <p>@pretext</p>
                 <p><a href="@item.Url()">Read More..</a></p>
@@ -59,8 +60,18 @@
                 {
                     <a href="?page=@(pageNumber -1)" class="item-link link-next" aria-label="Previous"><span aria-hidden="true" ><i class="fa-sharp fa-solid fa-chevron-left"></i></span></a>
                 }
-                <a href="#" class="item-link active">1</a>
-                <a href="#" class="item-link">2</a>
+                @for (int i = 1; i <= Math.Ceiling((decimal)totalItems / itemsPerPage); i++)
+                {
+                    if(i == pageNumber)
+                    {
+                        <a href="#" class="item-link active">@i</a>
+                    }
+                    else
+                    {
+                        <a href="?page=@i" class="item-link">@i</a>
+                    }
+                
+                }
                 
                 @if(pageNumber < Math.Ceiling((decimal)totalItems / itemsPerPage))
                 {

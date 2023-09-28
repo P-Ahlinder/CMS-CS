@@ -1,8 +1,10 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.Contact>
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+
 @{
-	Layout = "LayoutWithBreadcrumb.cshtml";
+    Layout = "LayoutWithBreadcrumb.cshtml";
+    var contactForm = new cmsCS.Models.ContactForm();
 }
 
 <div class="container py-5">
@@ -27,26 +29,30 @@
 <div class="container p-5 mb-5" id="form-container">
     <h2 class="text-center">Leave us a message for any information</h2>
     <div class="container">
-        <form class="p-5">
+        
+        @using (Html.BeginUmbracoForm("Index", "Contact", FormMethod.Post))
+        {
+            <div asp-validation-summary="All"></div>
             <div class="mb-3 row">
                 <div class="col">
-                    <input type="text" class="form-control" name="inputName" id="inputName" placeholder="Name" required>
+                    <input asp-for="@contactForm.Name" type="text" class="form-control"  placeholder="Name">
                 </div>
             </div>
             <div class="mb-3 row">
                 <div class="col">
-                    <input type="email" class="form-control" name="inputName" id="inputName" placeholder="Email" required>
+                    <input asp-for="@contactForm.Email" type="email" class="form-control" placeholder="Email">
                 </div>
             </div>
             <div class="mb-3 row">
                 <div class="col">
-                    <textarea type="text" rows="4" class="form-control" name="inputName" id="inputName" placeholder="Your message" required></textarea>
+                    <textarea asp-for="@contactForm.Message" rows="4" class="form-control" placeholder="Your message"></textarea>
                 </div>
             </div>
             <div class="mb-3 row justify-content-center">
                 <button type="submit" class="btn-fill">Send</button>
             </div>
-        </form>
+        }
+        
     </div>
 </div>
 
